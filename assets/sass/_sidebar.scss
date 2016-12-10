@@ -1,0 +1,25 @@
+.sidebar {
+  padding-top: 50px;
+  text-align: center;
+   @include bp(l) {
+     text-align: left;
+    }
+  @include bp(xl) {
+    border-top: 1px solid #000;
+    padding: 25px 0;
+  }
+
+  @include has(heading) {
+    text-transform: uppercase;
+    @include font(13px, 2.35, 700);
+  }
+  @include has(menu) {
+    @extend .list-unstyled;
+    @include font(13px, 2.35);
+    font-family: $font-family-secondary;
+    color: $color-faded;
+    i {
+      padding-right: 5px;
+    }
+  }
+}

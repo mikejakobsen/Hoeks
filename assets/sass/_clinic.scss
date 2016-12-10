@@ -1,0 +1,37 @@
+.clinic {
+  @include bp(l) {
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    padding: 25px 0;
+  }
+  @include bp(xl) {
+    border-bottom: 1px solid #000;
+  }
+
+  @include has(headline) {
+    text-transform: uppercase;
+  }
+  @include has(summary) {
+    p {
+      @include font-size(12);
+    }
+    @include bp(m) {
+      padding: 30px 0;
+    }
+  }
+  @include has(image) {
+    height: 215px;
+    background-repeat: no-repeat;
+    // background-size: contain;
+    background-size:100% 100%;
+  }
+  @include has(text) {
+    h2 {
+      color: $color-faded;
+      @include font(12, 2.35, 500);
+      font-size: 12px !important;
+      text-transform: uppercase;
+    }
+  }
+
+}

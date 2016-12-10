@@ -1,0 +1,56 @@
+// Colors
+$color-primary:                       #222;
+$color-secondary:                     #d35400;
+$color-white:                         #ffffff;
+$color-black:                         #000000;
+$color-light:                         #e7e7e7;
+$color-lighter:                       #f7f7f7;
+$color-dark:                          #333;
+$color-darker:                        #111;
+$color-faded:                         #777777;
+$color-grey:                          #999999;
+
+// Brand Colors
+$brand-primary:                       $color-primary;
+
+// Flex
+$enable-flex:                         true !default;
+
+// Page
+$link-hover-decoration:               none;
+$body-bg:                             #fff;
+$text-color:                          #333;
+$border-radius-base:                  0;
+$border-radius-large:                 0;
+$border-radius-small:                 0;
+
+// Typography
+$font-family-base:                    "Arimo", Helvetica, Arial, sans-serif;
+$font-family-secondary:               "Playfair Display", Helvetica, Arial, sans-serif;
+$font-family-menu:                    "Source Sans Pro", Helvetica, Arial, sans-serif;
+
+$font-size-base:                      13px;
+
+$headings-font-family:                "Arimo", Helvetica, Arial, sans-serif;
+$headings-font-weight:                500;
+$headings-line-height:                1.1;
+$headings-color:                      $text-color;
+
+// Navbar
+$navbar-height:                       100px;
+$navbar-margin-bottom:                0;
+
+// Navbar default
+$navbar-default-color:                $brand-primary;
+$navbar-default-bg:                   #ffffff;
+$navbar-default-border:               none;
+
+$navbar-default-link-color:           none;
+$navbar-default-link-hover-color:     none;
+$navbar-default-link-hover-bg:        none;
+$navbar-default-link-active-color:    none;
+$navbar-default-link-active-bg:       none;
+
+$navbar-default-brand-color:          $navbar-default-link-color;
+$navbar-default-brand-hover-color:    none;
+$navbar-default-brand-hover-bg:       none;

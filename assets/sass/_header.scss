@@ -1,0 +1,85 @@
+// Mostly Bootstrap overrides
+
+.navbar-nav>li>a {
+  font-family: $font-family-menu;
+  @include font(15, 1.2, 300);
+  text-transform: uppercase;
+  color: color-faded;
+}
+.navbar-nav Ul.dropdown-menu {
+  font-family: $font-family-secondary;
+  border: solid 1px rgb(222, 222, 222);
+  box-shadow: 0px 2px 11px 0px rgba(27, 35, 63, 0.19);
+  padding: 25px 40px 25px 40px;
+}
+
+.dropdown-menu>li>a {
+  position: relative;
+  @include font(13px, 2.7, 500);
+  color: $color-faded;
+}
+.dropdown-menu>li>a:after {
+  content: "\f105";
+  font-family: FontAwesome;
+  left: 0;
+  position:absolute;
+  top:2;
+}
+
+.navbar-nav > li > a {
+  @include bp(m) {
+      padding-top: 50px !important;
+      padding-bottom: 0 !important;
+    }
+}
+.navbar-brand {
+  padding-top: 30px !important;
+}
+
+// Remove the dropdown arrow
+span.caret { display: none !important; }
+
+.navbar .navbar-nav li.active > a {
+  text-decoration: underline;
+}
+
+.navbar .navbar-nav li a:hover,
+.navbar .navbar-nav > .active > a:hover,  {
+  background-color: initial;
+}
+
+.navbar-default .navbar-toggle {
+  &:focus, &:hover {
+    background-color: transparent;
+  }
+  border: none;
+}
+
+// Menu
+.navbar-toggle {
+  span {
+    &.icon-bar {
+      background-color: $color-dark;
+      transition: all 0.15s;
+    }
+    &:nth-child(2) {
+      transform: rotate(45deg);
+      transform-origin: 10% 10%;
+    }
+    &:nth-child(3) {
+      opacity: 0;
+    }
+    &:nth-child(4) {
+      transform: rotate(-45deg);
+      transform-origin: 10% 90%;
+    }
+  }
+  &.collapsed span {
+    &:nth-child(2), &:nth-child(4) {
+      transform: rotate(0);
+    }
+    &:nth-child(3) {
+      opacity: 1;
+    }
+  }
+}

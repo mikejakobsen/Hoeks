@@ -1,0 +1,128 @@
+// Mixins
+
+@mixin has($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+
+@mixin variant($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}
+
+@mixin bg-fullsize($image, $color:transparent) {
+  background: $color url($image) center/cover no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+@mixin fullAbsolute {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+@mixin centerX {
+  position: absolute;
+  left: 50%;
+  transform: translate3d(-50%, 0%, 0);
+}
+
+@mixin centerY {
+  position: absolute;
+  top: 50%;
+  transform: translate3d(0%, -50%, 0);
+}
+
+@mixin centerXY {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+@mixin clearfix {
+  &:after {
+    display: table;
+    clear: both;
+    width: 100%;
+    height: 1px;
+    content: '';
+  }
+}
+
+@mixin sharpTranslate {
+  -webkit-filter: blur(0);
+  filter:blur(radius);
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-perspective: 1000;
+}
+
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+    content: '';
+  }
+  > .aspect-ratio {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+// @method: font-size
+// @usage: @include font-size(12px);
+// @syntax: em|px|%
+
+@mixin font-size($size) {
+    @if (unit($size) == px) {
+        font-size: $size;
+        font-size: rem($size);
+    } @else if (unit($size) == em or unit($size) == rem) {
+        font-size: px($size);
+        font-size: strip-units($size) * 1rem;
+    } @else {
+        font-size: $size;
+    }
+}
+
+// @method: line-height
+// @usage: @include line-height(12px);
+// @syntax: em|px|%
+
+@mixin line-height($size) {
+    @if (unit($size) == px) {
+        line-height: $size;
+        line-height: rem($size);
+    } @else if (unit($size) == em or unit($size) == rem) {
+        line-height: px($size);
+        line-height: strip-units($size) * 1rem;
+    } @else {
+        line-height: $size;
+    }
+}
+
+// @method: font
+// @usage: @include font(12px, 120%, normal);
+
+@mixin font($size: 14px, $line-height: false, $weight: flase) {
+    @include font-size($size);
+    @if $line-height {
+        @include line-height($line-height);
+    }
+    @if $weight {
+        font-weight: $weight;
+    }
+  }

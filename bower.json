@@ -1,0 +1,20 @@
+{
+  "name": "rto-klinik",
+  "version": "0.0.0",
+  "authors": [
+    "Mike Jakobsen <mike@jakobsen.dk>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "*",
+    "bootstrap": "v4.0.0-alpha.4",
+    "DDBreakpoints": "ddbreakpoints#^1.0.6"
+  }
+}

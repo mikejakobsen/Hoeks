@@ -1,0 +1,36 @@
+footer {
+  text-align: center;
+  padding: 20px 0;
+   @include bp(l) {
+     padding: 50px 0;
+     text-align: left;
+    }
+  color: $color-grey;
+  @include font(14px, 1.857, 300);
+  a {
+    color: $color-grey;
+    border-bottom: 1px dashed $color-grey;
+  }
+  h4 {
+    text-transform: uppercase;
+    color: $color-faded;
+    @include font(13.99px, 1.857, 800);
+  }
+  .contact__companyname {
+    font-weight: bold;
+    color: $color-faded;
+  }
+}
+
+.open {
+  @include has(list) {
+    @extend .list-unstyled;
+    li {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  @include bp(l) {
+    padding-left: 20px;
+  }
+}

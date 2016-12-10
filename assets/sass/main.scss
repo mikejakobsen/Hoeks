@@ -1,0 +1,19 @@
+@import 'setup';
+@import '../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap';
+@import '../../bower_components/font-awesome/css/font-awesome.min.css';
+@import 'mixins';
+@import 'base';
+@import '../../bower_components/DDBreakpoints/lib/dd.breakpoints.scss';
+
+// Base
+@import 'header';
+@import 'footer';
+@import 'sidebar';
+
+// Pages
+@import 'clinic';
+
+// Widgets
+@import 'widgets/widget-general';
+@import 'widgets/widget-search';
+@import 'widgets/widget-list';
