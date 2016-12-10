@@ -7,7 +7,7 @@
 ```
 npm install
 
-bower installb
+bower install
 
 gulp watch
 ```
