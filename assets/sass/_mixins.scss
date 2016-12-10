@@ -12,6 +12,12 @@
   }
 }
 
+@mixin hideText {
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+
 @mixin bg-fullsize($image, $color:transparent) {
   background: $color url($image) center/cover no-repeat;
   -webkit-background-size: cover;

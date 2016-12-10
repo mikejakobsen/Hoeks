@@ -28,9 +28,9 @@
 
 .navbar-nav > li > a {
   @include bp(m) {
-      padding-top: 50px !important;
-      padding-bottom: 0 !important;
-    }
+    padding-top: 50px !important;
+    padding-bottom: 0 !important;
+  }
 }
 .navbar-brand {
   padding-top: 30px !important;
@@ -84,7 +84,7 @@ span.caret { display: none !important; }
   }
 }
 
-@media (max-width: 990px) {
+@include bp(xs, 990) {
   .navbar-header {
     float: none;
   }
