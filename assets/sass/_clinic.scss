@@ -10,10 +10,15 @@
 
   @include has(headline) {
     text-transform: uppercase;
+    @include font-size(18px);
+    @include bp(l) {
+      @include font-size(37px);
+    }
   }
   @include has(summary) {
+    padding: 10px 0;
     p {
-      @include font-size(12);
+      @include font-size(12px);
     }
     @include bp(m) {
       padding: 30px 0;
